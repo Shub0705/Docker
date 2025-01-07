@@ -1,0 +1,15 @@
+1)What is Docker?
+->Docker is a tool used for developing, packaging, and deploying applications efficiently.Docker is a container management service.It is open-source 
+Docker is quickly shipping, testing, and deploying code.
+
+-----Key Components of Docker-----
+1)Docker Engine: It is a core part of docker, that handles the creation and management of containers.
+2)Docker Image: It is a read-only template that is used for creating containers, containing the application code and dependencies.
+3)Docker Hub: It is a cloud based repository that is used for finding and sharing the container images.
+
+4)Dockerfile: It is a script that containing instructions to build a docker image.
+5)Docker Registry : It is a storage distribution system for docker images, where you can store the images in both public and private modes.
+----------------------------------------------------------
+2)What is Docker Container?
+->Docker container is a runtime instance of an image. 
+Allows developers to package applications with all parts needed such as libraries and other dependencies
