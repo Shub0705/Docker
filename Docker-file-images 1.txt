@@ -1,0 +1,59 @@
+***Docker File Notes****
+A Dockerfile is a text-based document that's used to create a container image. It provides instructions to the image builder on the commands to run, files to copy, startup command, and more.
+
+Common instructions :
+
+    Some of the most common instructions in a Dockerfile include:
+
+    1. FROM <image> : this specifies the base image that the build will extend.
+    
+    2. WORKDIR <path> : this instruction specifies the "working directory" or the path in the image where files will be copied and 
+                        commands will be executed.
+    
+    3. COPY <host-path> <image-path> : this instruction tells the builder to copy files from the host and put them into the container image.
+    
+    4. RUN <command> : this instruction tells the builder to run the specified command.
+    
+    5. ENV <name> <value> : this instruction sets an environment variable that a running container will use.
+    
+    6. EXPOSE <port-number> : this instruction sets configuration on the image that indicates a port the image would like to
+                              expose.
+    
+    7. USER <user-or-uid> : this instruction sets the default user for all subsequent instructions.
+    
+    8. CMD ["<command>", "<arg1>"] : this instruction sets the default command a container using this image will run.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+1. What is Docker Image?
+    Docker images are built using the Dockerfile which consists of a set of instructions that are required to 
+    containerize an application. The docker image includes the following to run a piece of software. A docker image4
+    is a platform-independent image that can be built in the Windows environment and it can be pushed to the docker
+    hub and pulled by others with different OS environments like Linux.
+
+        a. Application code.
+        b. Runtime.
+        c. Libraries
+        d. Environmental tools.
+
+    Docker image is very light in weight so can be portable to different platforms very easily.
+
+2. Components of Docker Image:
+    The following are the terminologies and components related to Docker Image:
+
+        a. Layers: Immutable filesystem layers stacked to form a complete image.
+        b. Base Image: The foundational layer, often a minimal OS or 
+                       runtime environment.
+        c. Dockerfile: A text file containing instructions to build a 
+                       Docker image.
+        d. Image ID: A unique identifier for each Docker image.
+        e. Tags: Labels used to manage and version Docker images.  
+
+
+3. Run a Docker File with different name :
+        Command : docker build -t <tag-name> -f <file-name> .
+        Example : docker build -t myubuntu:v1 -f MyDocker .
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
