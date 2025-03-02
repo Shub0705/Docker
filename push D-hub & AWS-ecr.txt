@@ -1,0 +1,39 @@
+Docker images push in Docker-Hub
+1)Go to docker hub and login---- [take your user and pass]
+2)Go to CMD 
+ a)sudo yum install docker -y
+ b)sudo systemctl start docker
+ c)sudo systemctl enable docker
+3)Login
+ a)sudo docker login
+   user:-"your username"
+    pass:-"yourpass"
+4)sudo docker images
+Jo bhi images ko push karna he uska tag change karo('httpd' ke jaga aap aapane image ka name dalo) 
+                                                                    (shubhamdoc0705/imagesrope----> ye wahi repo he jisme aapako push karna me )
+5)sudo docker tag httpd:latest shubhamdoc0705/imagesrope:v1          (:v1---->ye aapa ko "tag" denahe it any thig maine v1 diyahe)
+
+
+
+******************************************************************************************************************************
+---------------Docker images push in ECR(Amazon Elastic Container Registry)------------
+1)Go to CDM and install aws cli
+  a)curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  b)unzip awscliv2.zip
+  c)sudo ./aws/install
+2)Go to Amazon Elastic Container Registry and create repo (Go to repo)
+3)click on view push command
+4)aws configure
+ a)Access key "user-key"
+ b)Secret access key "passw"
+ c)region name : eu-west-3
+5)click on view push command
+  a)aws ecr get-login-password --region eu-west-3 | sudo docker login --username AWS --password-stdin 123456789.dkr.ecr.eu-west-3.amazonaw
+s.com
+ b)sudo docker tag "image-name":latest 123456789.dkr.ecr.eu-west-3.amazonaws.com/myimages:latest
+ c)sudo docker push 123456789.dkr.ecr.eu-west-3.amazonaws.com/myimages:latest
+**************************************************************************************************************************************************
+-----If you want to more version of your image----------
+
+1) sudo docker tag "image-name":latest 123456789.dkr.ecr.eu-west-3.amazonaws.com/myimages:v1
+ 2)  sudo docker push 123456789.dkr.ecr.eu-west-3.amazonaws.com/myimages:v1
